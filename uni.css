@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: 0.7s;
+}
+.big{
+    color: #C70039;
+}
+
+.logo{
+    width: 150px;
+    position: absolute;
+    left: 35px;
+
+    
+}
+.listContainer{
+    flex: 1;
+    text-align: right;
+}
+.header{
+    background-image:linear-gradient(
+        rgba(4,9,30,0.7),
+        rgba(4,9,30,0.7)
+        ),
+    url("https://raw.githubusercontent.com/WaiYanHtun11/HTML-CSS-FrontendWebDevelopment/main/HTML%26CSS/2.UniversityWebDesign/images/banner.png") ;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+ul li{
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+  position: relative;
+ 
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    
+}
+ul li a::marker{
+    color: red;
+}
+ul li a::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: lightcoral;
+    transition: 0.5s;
+    margin: auto;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+
+.fa{
+    display: none;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textbox{
+    width: 90%;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+  
+    
+}
+.textbox h1{
+    font-size:62px ;
+    margin-bottom:20px ;
+}
+.textbox p{
+    font-size: 20px;
+   
+    letter-spacing: 1px;
+}
+.visitbutton {
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    margin: 30px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+    position: relative;
+}
+.visitbutton:hover{
+    background-color:#C70039 ;
+    transition: 0.5s;
+    border: 2px solid #C70039;
+}
+/* Media CSS */
+@media(max-width:700px){
+    .textbox{
+      top: 100px;
+    }
+.textbox h1{
+    font-size: 40px;
+  
+}
+.textbox p{
+    font-size: 15px;
+}
+ul li{
+    display: block;
+}
+ul{
+    padding: 30px;
+}
+.listContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100vh;
+    background-color: lightcoral;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+}
+.fa{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 14px;
+    cursor: pointer;
+    
+}
+
+}
+
+.section:nth-child(even){
+    background-color: rgba(172, 168, 168, 0.478);
+}
+
+
+/* css for course section */
+.coursediv{
+    width: 100%;
+    margin: 0 auto;
+    padding-top:50px ;
+    text-align: center;
+    height: 100%;
+    background-color: white;
+}
+.coursediv h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 45px;
+}
+.ptag{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:100px ;
+    align-items: center;
+}
+.para{
+    
+    margin-bottom: 5%;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128, 0.347);
+    cursor: pointer;
+    padding: 10px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+.para:hover{
+    transition: 0.4s;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2)
+}
+.imagecolumn{
+    margin-bottom: 30px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.i{
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:rgba(240,177,177,0.7);
+   
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500px;
+    color: white;
+    font-size: 26px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+   transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+
+
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+@media (max-width:700px) {
+    .row{
+        flex-direction:column;
+        
+    }
+   
+    
+}
+
+/* css for facilities seciton  */
+.ii{
+    width: 400px;
+   
+    border-radius: 10px;
+    opacity: 1;
+    cursor: pointer;
+    transition: .8s;
+    text-decoration: none;
+}
+.ii:hover{
+    transform: scale(1.1);
+    z-index: 3;
+}
+.lettertext{
+    text-align: left;
+    margin-left:50px;
+    margin-top: 20px;
+}
+
+
+@media (max-width:700px) {
+    .lettertext{
+        margin-left: 80px;
+    }
+    .facilitesColumn{
+        margin-bottom: 30px;
+    }
+}
+
+/* css for recommend section */
+.profile{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.profilepic{
+    width:100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.recommend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #CCC2C0;
+    margin: 20px;
+    border-radius:20px;
+    padding: 10px;
+    width: 70%;
+    
+}
+.rec-2{
+    width: 800px;
+    margin-left: 50px;
+    text-align: left;
+}
+.rec-1{
+    padding: 10px;
+}
+/* css for contact us */
+.location{
+    width: 80%;
+    margin: 0 auto;
+}
+.location iframe{
+    width: 100%;
+}
+.iconAndText{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+.con{
+    font-size: 30px;
+    color: #C70039;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.comment{
+    width: 100%;
+    margin: 0 auto;
+}
+.contact-col{
+    margin-bottom: 40px;
+}
+input{
+    margin: 20px;
+    width: 500px;
+    height: 35px;
+    border: 1px solid #C70039;
+    padding: 10px;
+    
+    
+}
+.left-side{
+    padding-bottom: 120px;
+}
+.hero-btn{
+    margin: 20px;
+    width: 200px;
+
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    transition:0.3s;
+    background-color: #C70039;
+    border: 1px solid #C70039;
+    color: white;
+}
